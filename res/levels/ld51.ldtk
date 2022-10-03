@@ -5988,28 +5988,28 @@
 					"entityInstances": [
 						{
 							"__identifier": "Mob",
-							"__grid": [10,3],
+							"__grid": [10,2],
 							"__pivot": [0.5,1],
 							"__tags": [],
-							"__tile": { "tilesetUid": 26, "x": 0, "y": 560, "w": 16, "h": 16 },
+							"__tile": { "tilesetUid": 26, "x": 16, "y": 432, "w": 16, "h": 16 },
 							"__smartColor": "#FF0000",
 							"iid": "59a6fb93-2a00-11ed-b018-eb7b02496887",
 							"width": 16,
 							"height": 16,
 							"defUid": 25,
-							"px": [168,64],
+							"px": [168,48],
 							"fieldInstances": [
-								{ "__identifier": "type", "__value": "MT_Gun", "__type": "ExternEnum.MobType", "__tile": { "tilesetUid": 26, "x": 0, "y": 560, "w": 16, "h": 16 }, "defUid": 31, "realEditorValues": [{
+								{ "__identifier": "type", "__value": "MT_Melee", "__type": "ExternEnum.MobType", "__tile": { "tilesetUid": 26, "x": 16, "y": 432, "w": 16, "h": 16 }, "defUid": 31, "realEditorValues": [{
 									"id": "V_String",
-									"params": ["MT_Gun"]
+									"params": ["MT_Melee"]
 								}] },
-								{ "__identifier": "rank", "__value": 0, "__type": "Int", "__tile": null, "defUid": 34, "realEditorValues": [] },
+								{ "__identifier": "rank", "__value": 0, "__type": "Int", "__tile": null, "defUid": 34, "realEditorValues": [{ "id": "V_Int", "params": [0] }] },
 								{ "__identifier": "neverDropCharge", "__value": false, "__type": "Bool", "__tile": null, "defUid": 71, "realEditorValues": [] }
 							]
 						},
 						{
 							"__identifier": "Mob",
-							"__grid": [1,7],
+							"__grid": [2,4],
 							"__pivot": [0.5,1],
 							"__tags": [],
 							"__tile": { "tilesetUid": 26, "x": 0, "y": 560, "w": 16, "h": 16 },
@@ -6018,13 +6018,13 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 25,
-							"px": [24,128],
+							"px": [40,80],
 							"fieldInstances": [
 								{ "__identifier": "type", "__value": "MT_Gun", "__type": "ExternEnum.MobType", "__tile": { "tilesetUid": 26, "x": 0, "y": 560, "w": 16, "h": 16 }, "defUid": 31, "realEditorValues": [{
 									"id": "V_String",
 									"params": ["MT_Gun"]
 								}] },
-								{ "__identifier": "rank", "__value": 1, "__type": "Int", "__tile": null, "defUid": 34, "realEditorValues": [{ "id": "V_Int", "params": [1] }] },
+								{ "__identifier": "rank", "__value": 0, "__type": "Int", "__tile": null, "defUid": 34, "realEditorValues": [{ "id": "V_Int", "params": [0] }] },
 								{ "__identifier": "neverDropCharge", "__value": false, "__type": "Bool", "__tile": null, "defUid": 71, "realEditorValues": [] }
 							]
 						},
@@ -6061,7 +6061,7 @@
 						},
 						{
 							"__identifier": "Destructible",
-							"__grid": [3,3],
+							"__grid": [2,3],
 							"__pivot": [0.5,1],
 							"__tags": [],
 							"__tile": { "tilesetUid": 23, "x": 0, "y": 112, "w": 16, "h": 16 },
@@ -6070,7 +6070,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 36,
-							"px": [56,64],
+							"px": [40,64],
 							"fieldInstances": [
 								{ "__identifier": "tile", "__value": { "tilesetUid": 23, "x": 0, "y": 112, "w": 16, "h": 16 }, "__type": "Tile", "__tile": { "tilesetUid": 23, "x": 0, "y": 112, "w": 16, "h": 16 }, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
@@ -6205,7 +6205,7 @@
 						},
 						{
 							"__identifier": "Destructible",
-							"__grid": [6,3],
+							"__grid": [4,2],
 							"__pivot": [0.5,1],
 							"__tags": [],
 							"__tile": { "tilesetUid": 23, "x": 64, "y": 96, "w": 16, "h": 16 },
@@ -6214,7 +6214,7 @@
 							"width": 16,
 							"height": 16,
 							"defUid": 36,
-							"px": [104,64],
+							"px": [72,48],
 							"fieldInstances": [
 								{ "__identifier": "tile", "__value": { "tilesetUid": 23, "x": 64, "y": 96, "w": 16, "h": 16 }, "__type": "Tile", "__tile": { "tilesetUid": 23, "x": 64, "y": 96, "w": 16, "h": 16 }, "defUid": 37, "realEditorValues": [{
 									"id": "V_String",
@@ -6282,6 +6282,68 @@
 								{ "__identifier": "breakColor1", "__value": "#0056FF", "__type": "Color", "__tile": null, "defUid": 75, "realEditorValues": [{ "id": "V_Int", "params": [22271] }] },
 								{ "__identifier": "breakColor2", "__value": "#00FEFF", "__type": "Color", "__tile": null, "defUid": 76, "realEditorValues": [{ "id": "V_Int", "params": [65279] }] },
 								{ "__identifier": "yOff", "__value": -6, "__type": "Int", "__tile": null, "defUid": 88, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "DebugStart",
+							"__grid": [9,6],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": { "tilesetUid": 26, "x": 208, "y": 16, "w": 16, "h": 16 },
+							"__smartColor": "#FF00FF",
+							"iid": "a51ecf40-2a00-11ed-96de-cb151a6153a8",
+							"width": 16,
+							"height": 16,
+							"defUid": 73,
+							"px": [152,104],
+							"fieldInstances": []
+						},
+						{
+							"__identifier": "Destructible",
+							"__grid": [8,2],
+							"__pivot": [0.5,1],
+							"__tags": [],
+							"__tile": { "tilesetUid": 23, "x": 64, "y": 96, "w": 16, "h": 16 },
+							"__smartColor": "#0056FF",
+							"iid": "a9f18d00-2a00-11ed-96de-6342a3f93d50",
+							"width": 16,
+							"height": 16,
+							"defUid": 36,
+							"px": [136,48],
+							"fieldInstances": [
+								{ "__identifier": "tile", "__value": { "tilesetUid": 23, "x": 64, "y": 96, "w": 16, "h": 16 }, "__type": "Tile", "__tile": { "tilesetUid": 23, "x": 64, "y": 96, "w": 16, "h": 16 }, "defUid": 37, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["64,96,16,16"]
+								}] },
+								{ "__identifier": "empty", "__value": false, "__type": "Bool", "__tile": null, "defUid": 60, "realEditorValues": [] },
+								{ "__identifier": "playerDestructible", "__value": true, "__type": "Bool", "__tile": null, "defUid": 74, "realEditorValues": [{
+									"id": "V_Bool",
+									"params": [ true ]
+								}] },
+								{ "__identifier": "breakColor1", "__value": "#0056FF", "__type": "Color", "__tile": null, "defUid": 75, "realEditorValues": [{ "id": "V_Int", "params": [22271] }] },
+								{ "__identifier": "breakColor2", "__value": "#00FEFF", "__type": "Color", "__tile": null, "defUid": 76, "realEditorValues": [{ "id": "V_Int", "params": [65279] }] },
+								{ "__identifier": "yOff", "__value": -6, "__type": "Int", "__tile": null, "defUid": 88, "realEditorValues": [] }
+							]
+						},
+						{
+							"__identifier": "Mob",
+							"__grid": [4,5],
+							"__pivot": [0.5,1],
+							"__tags": [],
+							"__tile": { "tilesetUid": 26, "x": 0, "y": 768, "w": 16, "h": 16 },
+							"__smartColor": "#FF0000",
+							"iid": "fcabae90-2a00-11ed-96de-21c6d56b5bd5",
+							"width": 16,
+							"height": 16,
+							"defUid": 25,
+							"px": [72,96],
+							"fieldInstances": [
+								{ "__identifier": "type", "__value": "MT_Trash", "__type": "ExternEnum.MobType", "__tile": { "tilesetUid": 26, "x": 0, "y": 768, "w": 16, "h": 16 }, "defUid": 31, "realEditorValues": [{
+									"id": "V_String",
+									"params": ["MT_Trash"]
+								}] },
+								{ "__identifier": "rank", "__value": 0, "__type": "Int", "__tile": null, "defUid": 34, "realEditorValues": [] },
+								{ "__identifier": "neverDropCharge", "__value": false, "__type": "Bool", "__tile": null, "defUid": 71, "realEditorValues": [] }
 							]
 						}
 					]
