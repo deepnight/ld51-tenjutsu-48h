@@ -10,7 +10,7 @@ class Destructible extends Entity {
 	public function new(d:Entity_Destructible) {
 		super();
 		ALL.push(this);
-		initLife(4);
+		initLife(2);
 		isEmpty = d.f_empty;
 		player = d.f_playerDestructible;
 		setPosPixel(d.pixelX, d.pixelY+d.f_yOff);

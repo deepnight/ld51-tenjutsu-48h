@@ -46,8 +46,11 @@ class App extends dn.Process {
 		bg = new h2d.Bitmap( h2d.Tile.fromColor(Assets.black()) );
 		root.add(bg,0);
 
+		#if debug
+		startGame();
+		#else
 		startTitle();
-		// startGame();
+		#end
 	}
 
 	override function onResize() {

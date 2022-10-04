@@ -170,6 +170,14 @@ class Fx extends GameChildProcess {
 	}
 
 	function _dirtPhysics(p:HParticle) {
+		// Walls bounce
+		if( !collides(p) ) {
+			if( collides(p, 2*M.sign(p.dx), 0) )
+				p.dx = -p.dx*0.7;
+			if( collides(p, 0, 2*M.sign(p.dy)) )
+				p.dy = -p.dy*0.7;
+		}
+
 		if( collides(p) || p.y>=p.data0 && p.dy>0 ) {
 			if( p.inc1()==1 ) {
 				p.gy = p.dy = 0;
@@ -185,28 +193,29 @@ class Fx extends GameChildProcess {
 	}
 
 	public function brokenProp(x:Float, y:Float, c1:Col, c2:Col, ang:Float) {
-		var n = 60;
+		var n = 80;
 		for(i in 0...n) {
 			var pix = i<n*0.75;
-			var p = allocMain_normal(pix ? D.tiles.pixel : D.tiles.fxDirt, x+rnd(0,5,true), y+rnd(0,5,true));
+			var p = allocBg_normal(pix ? D.tiles.pixel : D.tiles.fxDirt, x+rnd(0,5,true), y+rnd(0,5,true));
 			p.setFadeS(rnd(0.7,1), 0, rnd(8,15));
 			p.colorize(i%3==0 ? c2 : c1);
 			if( !pix ) {
 				p.rotation = R.fullCircle();
 				p.setScale(rnd(0.1,0.2));
-				p.ds = R.around(0.1);
+				p.scaleY*=rnd(0.8,1,true);
+				p.ds = R.around(0.17);
 				p.dsFrict = 0.85;
 				p.dr = rnd(0.1,0.3,true);
 			}
-			p.moveAwayFrom(x,y+9, rnd(1,2));
+			p.moveAwayFrom(x,y+9, rnd(1,3));
 			if( ang!=-999 ) {
-				p.dx += Math.cos(ang)*R.around(2);
-				p.dy += Math.sin(ang)*R.around(2);
+				p.dx += Math.cos(ang)*rnd(1,2);
+				p.dy += Math.sin(ang)*rnd(1,2);
 			}
 			p.gy = R.around(0.1);
 			p.frict = R.aroundBO(0.94,5);
 
-			p.data0 = y+rnd(0,8);
+			p.data0 = y+rnd(0,12,true);
 			p.onUpdate = _dirtPhysics;
 		}
 	}
