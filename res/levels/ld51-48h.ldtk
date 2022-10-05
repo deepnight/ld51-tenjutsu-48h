@@ -9,7 +9,7 @@
 		"url": "https://ldtk.io"
 	},
 	"jsonVersion": "1.1.4",
-	"appBuildId": 460664,
+	"appBuildId": 462327,
 	"nextUid": 91,
 	"identifierStyle": "Capitalize",
 	"worldLayout": "Free",
@@ -2383,6 +2383,20 @@
 								{ "__identifier": "breakColor2", "__value": "#964023", "__type": "Color", "__tile": null, "defUid": 76, "realEditorValues": [] },
 								{ "__identifier": "yOff", "__value": -6, "__type": "Int", "__tile": null, "defUid": 88, "realEditorValues": [] }
 							]
+						},
+						{
+							"__identifier": "DebugStart",
+							"__grid": [15,6],
+							"__pivot": [0.5,0.5],
+							"__tags": [],
+							"__tile": { "tilesetUid": 26, "x": 208, "y": 16, "w": 16, "h": 16 },
+							"__smartColor": "#FF00FF",
+							"iid": "a51ecf40-2a00-11ed-96de-cb151a6153a8",
+							"width": 16,
+							"height": 16,
+							"defUid": 73,
+							"px": [248,104],
+							"fieldInstances": []
 						}
 					]
 				},
@@ -6283,20 +6297,6 @@
 								{ "__identifier": "breakColor2", "__value": "#00FEFF", "__type": "Color", "__tile": null, "defUid": 76, "realEditorValues": [{ "id": "V_Int", "params": [65279] }] },
 								{ "__identifier": "yOff", "__value": -6, "__type": "Int", "__tile": null, "defUid": 88, "realEditorValues": [] }
 							]
-						},
-						{
-							"__identifier": "DebugStart",
-							"__grid": [9,6],
-							"__pivot": [0.5,0.5],
-							"__tags": [],
-							"__tile": { "tilesetUid": 26, "x": 208, "y": 16, "w": 16, "h": 16 },
-							"__smartColor": "#FF00FF",
-							"iid": "a51ecf40-2a00-11ed-96de-cb151a6153a8",
-							"width": 16,
-							"height": 16,
-							"defUid": 73,
-							"px": [152,104],
-							"fieldInstances": []
 						},
 						{
 							"__identifier": "Destructible",
