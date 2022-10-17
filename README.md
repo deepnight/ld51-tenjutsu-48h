@@ -1,4 +1,4 @@
-# ld51-tenjutsu-48h
+# Tenjutsu 
 This is the source code of **Tenjutsu**, a 48h game created for Ludum Dare 51.
 
 [Play it online](https://deepnight.net/games/tenjutsu/) | [Homepage](https://deepnight.net)
