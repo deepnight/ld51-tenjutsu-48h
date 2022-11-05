@@ -48,6 +48,7 @@ class App extends dn.Process {
 
 		#if debug
 		startGame();
+		// startTitle();
 		#else
 		startTitle();
 		#end
