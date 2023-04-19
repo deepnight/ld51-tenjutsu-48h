@@ -171,6 +171,7 @@ class Console extends h2d.Console {
 				var lowArg = reg.matched(2).toLowerCase();
 				for(a in commands.get(c).args)
 					switch a.t {
+						case AArray(_):
 						case AInt:
 						case AFloat:
 						case AString:
