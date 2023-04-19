@@ -56,9 +56,9 @@ class Game extends AppChildProcess {
 		interactive.onRelease = onMouseUp;
 		mouse = new LPoint();
 
-		var start = Assets.worldData.all_levels.Entrance;
+		var start = Assets.worldData.all_worlds.Default.all_levels.Entrance;
 		#if debug
-		for(l in Assets.worldData.levels)
+		for(l in Assets.worldData.all_worlds.Default.levels)
 			if( l.l_Entities.all_DebugStart.length>0 ) {
 				var e = l.l_Entities.all_DebugStart[0];
 				start = l;
@@ -88,7 +88,7 @@ class Game extends AppChildProcess {
 	public function exitToLevel(dx:Int, dy:Int) {
 		var gx = level.data.worldX + hero.attachX + dx*2*G;
 		var gy = level.data.worldY + hero.attachY + dy*2*G;
-		for(l in Assets.worldData.levels) {
+		for(l in Assets.worldData.all_worlds.Default.levels) {
 			if( gx>=l.worldX && gx<l.worldX+l.pxWid && gy>=l.worldY && gy<l.worldY+l.pxHei ) {
 				var x = gx-l.worldX;
 				var y = gy-l.worldY;
@@ -156,7 +156,7 @@ class Game extends AppChildProcess {
 
 	public function nextLevel() {
 		var next = false;
-		for(l in Assets.worldData.levels) {
+		for(l in Assets.worldData.all_worlds.Default.levels) {
 			if( l==level.data )
 				next = true;
 			else if( next ) {
@@ -180,7 +180,7 @@ class Game extends AppChildProcess {
 	function onLdtkReload() {
 		hud.notify("LDtk reloaded");
 		if( level!=null )
-			startLevel( Assets.worldData.getLevel(level.data.uid) );
+			startLevel( Assets.worldData.all_worlds.Default.getLevel(level.data.uid) );
 	}
 
 	/** Window/app resize event **/

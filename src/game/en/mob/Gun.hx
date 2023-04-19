@@ -121,7 +121,7 @@ class Gun extends Mob {
 			// Find a good shoot spot
 			if( !hasMoveTarget() && !inShootSpot(attachX,attachY) ) {
 				var dh = new dn.DecisionHelper(level.cachedEmptyPoints);
-				dh.remove( pt->!inShootSpot(pt.levelX,pt.levelY) );
+				dh.discard( pt->!inShootSpot(pt.levelX,pt.levelY) );
 				dh.score( pt->-pt.distCase(hero)*0.5 );
 				dh.score( pt->-M.iabs(pt.cy-hero.cy)*0.2 );
 				dh.score( pt->dirTo(hero)<0 && pt.cx>cx || dirTo(hero)>0 && pt.cx<cx ? 3 : 0 );
